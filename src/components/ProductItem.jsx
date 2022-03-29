@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import btAddToCart from "@icons/bt_add_to_cart.svg";
 import "../styles/ProductItem.scss";
 
 const ProductItem = () => {
+  const [cart, setCart] = useState([]);
+
+  const handleCart = () => {
+    setCart([]);
+  };
+
   return (
     <div className="ProductItem">
       <img
@@ -13,8 +20,8 @@ const ProductItem = () => {
           <p>$120,00</p>
           <p>Bike</p>
         </div>
-        <figure>
-          <img src="./icons/bt_add_to_cart.svg" alt="" />
+        <figure onClick={handleCart}>
+          <img src={btAddToCart} alt="" />
         </figure>
       </div>
     </div>
