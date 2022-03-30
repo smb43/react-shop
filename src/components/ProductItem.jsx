@@ -4,10 +4,10 @@ import AppContext from "@context/AppContext";
 import "../styles/ProductItem.scss";
 
 const ProductItem = ({ product }) => {
-  const { AddToCart } = useContext(AppContext);
+  const { addToCart } = useContext(AppContext);
 
   const handleCart = (item) => {
-    AddToCart(item);
+    addToCart(item);
   };
 
   return (
